@@ -18,11 +18,11 @@ export const imageVariationCase = async (openai: OpenAI, { baseImage }: Options)
         response_format: "url",
     });
 
-    const fileName = await downloadImagesAsPng(response.data[0].url);
-    const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
+    // const fileName = await downloadImagesAsPng(response.data[0].url);
+    // const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
 
     return {
-        url: url,
+        url: response.data[0].url,
         openAIUrl: response.data[0].url,
         revised_prompt: response.data[0].revised_prompt,
     }
