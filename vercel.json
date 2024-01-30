@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "main.tsx", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/gpt/(.*)", "dest": "main.tsx" },
+      { "src": "/(.*)", "dest": "main.tsx" }
+    ]
+}
