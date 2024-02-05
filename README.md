@@ -24,6 +24,8 @@
 
 ## Description
 
+IA CEHF is a project to help the CEHF team to manage the IA process. This project is a backend to manage the data and the process of the IA.
+
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
