@@ -22,10 +22,10 @@ export const imageGenerationCase = async (openai: OpenAI, { prompt, originalImag
         });
 
         const fileName = await downloadImagesAsPng(response.data[0].url);
-        const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
+        // const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
 
         return {
-            url: url,
+            url: fileName,
             openAIUrl: response.data[0].url,
             revised_prompt: response.data[0].revised_prompt,
         }
@@ -45,10 +45,10 @@ export const imageGenerationCase = async (openai: OpenAI, { prompt, originalImag
     });
 
     const fileName = await downloadImagesAsPng(response.data[0].url);
-    const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
+    // const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
 
     return {
-        url: url,
+        url: fileName,
         openAIUrl: response.data[0].url,
         revised_prompt: response.data[0].revised_prompt,
     }
