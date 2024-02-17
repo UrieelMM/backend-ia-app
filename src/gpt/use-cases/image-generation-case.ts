@@ -18,14 +18,14 @@ export const imageGenerationCase = async (openai: OpenAI, { prompt, originalImag
             n: 1,
             size: "1024x1024",
             quality: "standard",
-            response_format: "url",
+            response_format: "b64_json",
         });
 
         // const fileName = await downloadImagesAsPng(response.data[0].url);
         // const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
 
         return {
-            url: response.data[0].url,
+            url: response.data[0].b64_json,
             openAIUrl: response.data[0].url,
             revised_prompt: response.data[0].revised_prompt,
         }
