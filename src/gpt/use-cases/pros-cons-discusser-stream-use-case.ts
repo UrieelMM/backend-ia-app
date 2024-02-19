@@ -10,7 +10,7 @@ export const prosConsDiscusserStreamUseCase = async (openai: OpenAI, {prompt}: O
 
     return await openai.chat.completions.create({
         stream: true,
-        model: "gpt-4-turbo-preview",
+        model: "gpt-4",
         messages: [
             {
                 role: "system",
