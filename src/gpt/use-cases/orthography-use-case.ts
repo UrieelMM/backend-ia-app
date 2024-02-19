@@ -33,7 +33,7 @@ export const orthographyCheck = async (openai: OpenAI, options: OrthographyCheck
                 content: prompt,
             }
         ],
-        model: "gpt-3.5-turbo-1106",
+        model: "gpt-4",
         temperature: 0.2,
         max_tokens: 150,
         response_format: {

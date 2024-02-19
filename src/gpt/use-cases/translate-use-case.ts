@@ -19,7 +19,7 @@ export const translateCase = async (openai: OpenAI, options: Translate) => {
                 `
             },
         ],
-        model: "gpt-3.5-turbo-1106",
+        model: "gpt-4",
         temperature: 0.2,
         // max_tokens: 150,
     });
