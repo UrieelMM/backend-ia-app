@@ -4,11 +4,11 @@ import OpenAI from 'openai';
 
 interface Options {
   threadId: string;
-  assistantId?: string;
+  assistantId: string;
 }
 
 export const createRunCase = async (openai: OpenAI, options: Options) => {
-  const { threadId, assistantId = 'asst_dmC3MwUpJztpb3L1XTuYuyCz' } = options;
+  const { threadId, assistantId } = options;
 
   const run = await openai.beta.threads.runs.create(threadId, {
     assistant_id: assistantId,

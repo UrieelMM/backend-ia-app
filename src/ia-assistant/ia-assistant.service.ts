@@ -23,6 +23,7 @@ export class IaAssistantService {
     
     const run = await createRunCase(this.openai, {
       threadId: question.threadId,
+      assistantId: question.assistantId,
     });
 
     await checkCompletedStatusCase(this.openai, {

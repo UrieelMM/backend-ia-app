@@ -8,4 +8,7 @@ export class QuestionDto {
 
   @IsString()
   readonly question: string;
+
+  @IsString()
+  readonly assistantId: string;
 }
