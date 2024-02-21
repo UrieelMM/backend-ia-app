@@ -6,7 +6,7 @@ import { diskStorage } from "multer";
 import { GptService } from './gpt.service';
 import { AudioToTextDto, ImageGenerationDto, ImageVariationDto, OrthographyDto, ProsConsDiscusserDto, TextToAudioDto, TranslateDto } from './dtos';
 
-@Controller('gpt')
+@Controller('api/gpt')
 export class GptController {
   constructor(private readonly gptService: GptService) { }
 

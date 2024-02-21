@@ -4,7 +4,7 @@ import { IaAssistantService } from './ia-assistant.service';
 import { QuestionDto } from './dtos/question.dto';
 import { ListMessagesDto } from './dtos/list-messages.dto';
 
-@Controller('ia-assistant')
+@Controller('api/ia-assistant')
 export class IaAssistantController {
   constructor(private readonly iaAssistantService: IaAssistantService) {
   }
